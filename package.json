@@ -10,9 +10,17 @@
     "lodash": "^4.15.0",
     "slackbots": "^0.5.2"
   },
+    "engines": {
+    "node": "6.4.0",
+    "npm": "3.10.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dteixeir/jive-webhook.git"
+  },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "relias learning",
   "license": "ISC"
