@@ -20,6 +20,9 @@ var bot = {
     slackbot.on('start', function() {
       slackbot.postMessageToUser('danny', " --------------- headers --------------- \n" + headers);
       slackbot.postMessageToUser('danny', "--------------- body --------------- \n" + body);
+
+      slackbot.postMessageToUser('leo', " --------------- headers --------------- \n" + headers);
+      slackbot.postMessageToUser('leo', "--------------- body --------------- \n" + body);
     });
   }
 }
