@@ -1,7 +1,7 @@
 var slackbot = require('../classes/slackBot');
 
 module.exports = function (app, route) {
-    app.post("/webhook/:id", function(req, res, next) {
+    app.post("/webhook", function(req, res, next) {
         //console.log(req);
         //console.log(req.body);
         var text = JSON.stringify(req.headers);

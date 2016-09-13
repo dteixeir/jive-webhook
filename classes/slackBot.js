@@ -18,8 +18,8 @@ var bot = {
     });
 
     slackbot.on('start', function() {
-      slackbot.postMessageToUser('danny', "headers -> " + headers);
-      slackbot.postMessageToUser('danny', "body -> " + body);
+      slackbot.postMessageToUser('danny', " --------------- headers --------------- \n" + headers);
+      slackbot.postMessageToUser('danny', "--------------- body --------------- \n" + body);
     });
   }
 }
