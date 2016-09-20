@@ -13,7 +13,7 @@ var bot = {
 
     
     slackbot = new Bot({
-      token: 'xoxb-78860780950-vR0Tga9ox1rG2LIhHRnzLNOc',
+      token: process.env.BOT_KEY,
       name: 'jivebot'
     });
 
