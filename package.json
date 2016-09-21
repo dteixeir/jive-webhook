@@ -7,10 +7,13 @@
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "express": "^4.14.0",
+    "file-system": "^2.2.1",
     "lodash": "^4.15.0",
+    "node-slack-upload": "^1.1.1",
+    "q": "^1.4.1",
     "slackbots": "^0.5.2"
   },
-    "engines": {
+  "engines": {
     "node": "6.4.0",
     "npm": "3.10.3"
   },

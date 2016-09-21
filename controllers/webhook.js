@@ -2,11 +2,10 @@ var slackbot = require('../classes/slackBot');
 
 module.exports = function (app, route) {
     app.post("/webhook", function(req, res, next) {
-        //console.log(req);
-        //console.log(req.body);
-        var text = JSON.stringify(req.headers);
+        var headers = JSON.stringify(req.headers);
         var body = JSON.stringify(req.body);
-        slackbot.message('danny', text, body);
+
+        slackbot.message(headers, body);
         
         //slackbot.message('danny', JSON.stringify(req.body));
         res.send({ status: 200 });
@@ -33,6 +32,16 @@ module.exports = function (app, route) {
         res.send({ data: JSON.stringify(slackbot.getUsers()) });
     });
 
+    app.post('/webhook/snippet', function (req, res, next) {
+        var headers = JSON.stringify(req.headers);
+        var body = JSON.stringify(req.body);
+
+        if (slackbot.snippet(headers, body)) {
+            res.send({ status: 200 });
+        } else {
+            res.send({ status: 400 });
+        }
+    });
     // Return middleware ?? per use case stuff?
     return function(req, res, next) {
         next();
